@@ -12,7 +12,9 @@ import java.io.Serializable;
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
-        property = "typeFlow")
+        property = "typeFlow",
+        visible = true
+)
 @JsonSubTypes({
         @JsonSubTypes.Type(value = CoordinatorDTO.class, name = PeopleFlow.FLOW_COORDNATOR),
         @JsonSubTypes.Type(value = ProgrammerDTO.class, name = PeopleFlow.FLOW_PROGRAMMER)
